@@ -9,3 +9,5 @@ console.log(typeof  "Bob");  //  ->  string
 let  typeOfYear  =  typeof  year;
 console.log(typeOfYear);  //  ->  number
 console.log(typeof  typeOfYear);  //  ->  string
+
+
