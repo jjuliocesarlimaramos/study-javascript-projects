@@ -1,0 +1,1 @@
+let x = "aliabcdefg".slice(2, 4)
