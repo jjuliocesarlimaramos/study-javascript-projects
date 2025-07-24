@@ -1,0 +1,21 @@
+It's time to move on to determine what is actually going on with these scopes. Unfortunately, the scopes of variables (and constants) declared with let and const look slightly different than those declared with var. So we will discuss them independently.
+
+The first rule is simple. If we declare any variable or constant using let or const, respectively, outside the code blocks, they will be global. By this we mean that their names will be visible throughout the program, outside blocks, inside blocks, in functions, and so on. We will be able to refer to them anywhere by their names, and of course have access to their values.
+
+What happens if we declare something using let or const inside a block? This will create a local variable or constant. It will be visible only inside the block in which it was declared and in blocks that can optionally be nested in it.
+
+Let's look at a simple example:
+
+
+##########################################
+
+let  height  =  180;
+{
+         let  weight  =  70;
+         console.log(height);  //  ->  180
+         console.log(weight);  //  ->  70	
+}
+console.log(height);  //  ->  180
+console.log(weight);  //  ->  Uncaught  ReferenceError:  weight  is  not  defined
+
+##########################################
